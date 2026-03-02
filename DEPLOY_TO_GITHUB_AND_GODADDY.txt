@@ -1,0 +1,83 @@
+DEPLOY TO GITHUB PAGES + GODADDY
+================================
+
+Use a NEW GitHub repo. That is the fastest path.
+Do not keep trying to repair a repo that already has broken Pages settings, theme files, or stale custom-domain config.
+
+1. Unzip this package on your computer.
+
+2. Create a new PUBLIC GitHub repo.
+   Example name: curtisbram-site
+
+3. Upload the unzipped FILES to the repo root.
+   After upload, the top level of the repo should show:
+   - index.html
+   - CNAME
+   - .nojekyll
+   - assets/
+   - s/
+   - vitae/
+   - publications/
+   - media/
+   - teaching/
+   - elitism-vs-populism/
+
+   If you only see one outer folder, you uploaded the wrong thing.
+   index.html must be visible immediately at the top level of the repo.
+
+4. Turn on GitHub Pages.
+   GitHub -> repo -> Settings -> Pages
+   Source: Deploy from a branch
+   Branch: main
+   Folder: /(root)
+
+5. Wait for the first deployment.
+   Open the temporary GitHub Pages URL shown in the Pages screen.
+   It should already look correct.
+
+6. Set the custom domain in GitHub.
+   GitHub -> repo -> Settings -> Pages -> Custom domain
+   Enter: www.curtisbram.com
+   Save.
+
+   Important: the CNAME file in this package helps, but GitHub still wants the custom domain set in repository settings.
+
+7. Update DNS in GoDaddy.
+   GoDaddy -> Domain -> DNS
+
+   A records for @
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+
+   CNAME for www
+   Value: YOUR-GITHUB-USERNAME.github.io
+   Example: if your GitHub username is curtisbram, use curtisbram.github.io
+
+   Do NOT put the repo name in the CNAME target.
+   Correct: yourusername.github.io
+   Wrong:  yourusername.github.io/reponame
+
+8. Remove conflicting website records.
+   Delete old Squarespace records for @ or www.
+   Do NOT delete MX records or email-related TXT records.
+
+9. Wait for DNS propagation.
+   Refresh the GitHub Pages settings page.
+   When GitHub sees the DNS correctly, enable Enforce HTTPS.
+
+10. Final checks.
+   - https://www.curtisbram.com loads
+   - https://curtisbram.com redirects correctly
+   - /vitae/ works
+   - /publications/ works
+   - PDF links in publications open
+
+11. Only after that, cancel Squarespace.
+
+If GitHub says the custom domain is already taken:
+- go to the OLD repo that had the domain
+- Settings -> Pages
+- remove the custom domain there first
+- then come back to the new repo and add it again

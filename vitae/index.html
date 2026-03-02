@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+(function () {
+  var host = window.location.hostname || "";
+  var base = "/";
+  if (host.endsWith("github.io")) {
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    if (parts.length > 0) {
+      base = "/" + parts[0] + "/";
+    }
+  }
+  document.write('<base href="' + base + '">');
+})();
+</script>
+  <title>CV | Curtis Bram</title>
+  <meta name="description" content="Curriculum vitae for Curtis Bram.">
+  <meta name="theme-color" content="#f5f1ea">
+  <meta property="og:title" content="CV | Curtis Bram">
+  <meta property="og:description" content="Curriculum vitae for Curtis Bram.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/headshot.jpg">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="site-kicker">Academic website</div>
+        <a class="brand-link" href="./">
+          <h1 class="site-name">Curtis Bram</h1>
+        </a>
+        <p class="site-tagline">Survey methods and American politics</p>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="nav" id="site-nav" aria-label="Primary navigation">
+          <a href="./"><span>About</span><span>01</span></a>
+<a href="vitae/" aria-current="page"><span>CV</span><span>02</span></a>
+<a href="elitism-vs-populism/"><span>Elitism vs. Populism</span><span>03</span></a>
+<a href="publications/"><span>Journal Articles</span><span>04</span></a>
+<a href="media/"><span>Media</span><span>05</span></a>
+<a href="teaching/"><span>Teaching</span><span>06</span></a>
+        </nav>
+        <div class="social-list" aria-label="Social links">
+          <a class="social-pill" href="https://twitter.com/curtisgbram" target="_blank" rel="noopener noreferrer">X</a><a class="social-pill" href="https://www.linkedin.com/in/curtisbram" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="sidebar-note">Research on survey methods, elections, political participation, and democratic attitudes.</p>
+      </div>
+    </aside>
+    <main class="main" id="main">
+      
+<section class="cv-panel">
+  <div class="cv-head">
+    <div>
+      <div class="eyebrow">Curriculum vitae</div>
+      <h2 class="cv-title">CV</h2>
+      <p class="page-intro">Open the current CV in your browser or download a copy directly.</p>
+    </div>
+    <div class="button-row">
+      <a class="btn btn-primary" href="s/CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+      <a class="btn" href="s/CV.pdf" download>Download</a>
+    </div>
+  </div>
+  <div class="cv-frame">
+    <iframe src="s/CV.pdf#view=FitH" title="Curtis Bram CV"></iframe>
+  </div>
+  <p class="small-note">If the embedded preview does not render in a given browser, the PDF link above still works.</p>
+</section>
+
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Curtis Bram</div>
+      <div>Survey methods and American politics</div>
+    </div>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

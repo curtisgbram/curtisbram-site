@@ -3,9 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teaching | Curtis Bram</title>
+  
+  <script>
+    (function () {
+      var host = window.location.hostname || "";
+      if (host.endsWith("github.io")) {
+        var parts = window.location.pathname.split("/").filter(Boolean);
+        if (parts.length > 0) {
+          document.write('<base href="/' + parts[0] + '/">');
+          return;
+        }
+      }
+      document.write('<base href="./">');
+    })();
+  </script>
+<title>Teaching | Curtis Bram</title>
   <meta name="description" content="Teaching experience and courses taught by Curtis Bram.">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,19 +27,19 @@
   <div class="layout">
     <header class="site-header">
       <div class="brand">
-        <a class="site-title" href="/">Curtis Bram</a>
+        <a class="site-title" href="./">Curtis Bram</a>
         <p class="site-tagline">Survey methods and american politics</p>
       </div>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a href="/" class="">About</a>
-          <a href="/vitae/" class="">CV</a>
-          <a href="/elitism-vs-populism/" class="">Elitism vs. Populism</a>
-          <a href="/publications/" class="">Journal Articles</a>
-          <a href="/media/" class="">Media</a>
-          <a href="/teaching/" class="active">Teaching</a>
+          <a href="./" class="">About</a>
+          <a href="vitae/" class="">CV</a>
+          <a href="elitism-vs-populism/" class="">Elitism vs. Populism</a>
+          <a href="publications/" class="">Journal Articles</a>
+          <a href="media/" class="">Media</a>
+          <a href="teaching/" class="active">Teaching</a>
       </nav>
 
       <div class="social" aria-label="Social links">
@@ -94,6 +108,6 @@
     <p>© <span id="year"></span> Curtis Bram</p>
   </footer>
 
-  <script src="/assets/js/nav.js"></script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>
